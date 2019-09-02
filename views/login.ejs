@@ -1,0 +1,19 @@
+<% include head %>
+<body>
+    <div class="flex-container">
+        <div class="main-login-container">
+            <div class="login-container">
+                <div class="icon-login"></div>
+                <form class="form-flex" action="/users/loginProcess" method="post">
+                    <input class="input-blue-border" type="text" name="email" placeholder="Email">
+                    <input class="input-blue-border" type="password" name="password" placeholder="Password">
+                    <div class="password-options">
+                        <a href="" id="forgot">Forgot Password</a>
+                        <input class="button" type="submit" value="Next" id="button-login">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

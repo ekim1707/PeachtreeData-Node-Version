@@ -1,0 +1,38 @@
+<% include head %>
+<body>
+    <div class="flex-container">
+        <header>
+            <div class="left-header">
+                Something left
+            </div>
+            <div class="center-header">
+                Something center
+            </div>
+            <div class="right-header">
+                <form action="/users/login" method="GET">
+                    <input class="button" type="submit" value="Login" id="button-login">
+                </form>
+            </div>
+        </header>
+        <hr class="header-hr">
+        <div class="body-container">
+            <div class="half-containers">
+                <div class="icon-logo"></div>
+            </div>
+            <div class="half-containers">
+                <form class="signup-container" action="/users/register" method="POST">
+                    Create An Account
+                    <div class="signup-name-field">
+                        <input class="form-style-name" type="text" name="first_name" placeholder="First Name">
+                        <input class="form-style-name" type="text" name="last_name" placeholder="Last Name">
+                    </div>
+                    <input class="form-style" type="text" name="email" placeholder="Email">
+                    <input class="form-style" type="password" name="password" placeholder="Password">
+                    <input class="form-style" type="password" name="password2" placeholder="Re-type Password">
+                    <input class="button" type="submit" value="Sign-up">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>      

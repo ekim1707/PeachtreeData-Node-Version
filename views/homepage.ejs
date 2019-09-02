@@ -1,0 +1,52 @@
+<% include head_homepage %>
+<style>
+.profile-pic {
+  background: url('/images/icon-profilepicture.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  width: 100px;
+  height: 100px;
+}
+/* .profile-pic:hover {
+
+} */
+</style>
+<body>
+  <div class="flex-container">
+    <header>
+      <div class="left-header">
+        <div class="profile-pic"></div>
+      </div>
+      <div class="center-header">
+        <input type="text" class="google-search" placeholder="Google Search">
+      </div>
+      <div class="right-header">
+        <img src="/images/icon-googleapps.png" width="25px" height="25px" alt="">
+        <img src="/images/icon-menu.jpg" width="25px" height="25px" alt="">
+        <a href="/" id="logout">Logout</a>
+      </div>
+    </header>
+    <hr class="header-hr">
+    <div class="body-container">
+      <div class="navbar"><% include navbar %></div>
+      <div class="main-container">
+
+      </div>
+    </div>
+  </div>
+<script>
+$(document).ready(function () {
+
+  const datepicker = require('js-datepicker');
+  const picker = datepicker('#datepicker');
+  const controlClick = (e) => {
+
+  }
+
+  window.addEventListener('click', controlClick);
+})
+</script>
+</body>
+</html>

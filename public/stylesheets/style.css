@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.flex-container {
+    width: 100%;
+    height: 98vh;
+}
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 5%;
+}
+.left-header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 15%;
+}
+/* .profile-pic {
+background: url('/images/pd.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: none;
+border-radius: 15px;
+width: 140px;
+height: 100px;
+} */
+.center {
+    display: flex;
+    flex-direction: column nowrap;
+    justify-content: center;
+    width: 70%;
+}
+.right-header{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    width: 15%;
+}
+#login {
+    text-decoration: none;
+    color: gray;
+}
+
+.header-hr {
+    border: 2px solid rgb(233, 230, 230);
+    margin-bottom: 0;
+}
+
+.body-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 95%;
+    background: whitesmoke;
+}
+.half-containers {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 49%;
+    height: 100%;
+    padding: 10px;
+    background: transparent;
+}
+.icon-logo {
+    width: 60%;
+    height: 70%;
+    background: url('/images/icon-logo.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.signup-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    border-radius: 15px;
+    color: rgb(59, 59, 59);
+    background: white;
+    padding: 15px;
+    font-size: 24px;
+}
+.signup-name-field {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.form-style-name, .form-style {
+    margin: 20px;
+    padding: 10px;
+    width: 182.5px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 25px;
+    font-size: 16px;
+    color: rgb(59, 59, 59);
+}
+.form-style {
+    width: 400px;
+    height: 40px;
+}
+.form-style-name:focus, .form-style:focus { 
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+.button {
+    border: 1px solid gray;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 16px;
+    color: rgb(59, 59, 59);
+    transition: .5s;
+}
+.button:hover {
+    cursor: pointer;
+    background: lightgray;
+    transition: .5s;
+}
+#button-login {
+    border-radius: 10px;
+    font-weight: bolder;
+    color: white;
+    background: dodgerblue;
+}
+
+.main-login-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+.login-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 70%;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+}
+.icon-login {
+    width: 35%;
+    height: 40%;
+    margin-top: 8vh;
+    background: url('/images/icon-logo.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.form-flex {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.input-blue-border {
+    width: 60%;
+    height: 15%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid dodgerblue;
+}
+.input-blue-border:focus { 
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+.password-options {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+#forgot {
+    text-decoration: none;
+    color: dodgerblue;
+}
