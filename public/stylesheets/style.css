@@ -7,7 +7,7 @@ body {
 }
 .flex-container {
     width: 100%;
-    height: 98vh;
+    height: 97vh;
 }
 header {
     display: flex;
@@ -76,7 +76,7 @@ height: 100px;
 .icon-logo {
     width: 60%;
     height: 70%;
-    background: url('/images/icon-logo.png');
+    background: url('../images/icon-logo.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -101,7 +101,7 @@ height: 100px;
 .form-style-name, .form-style {
     margin: 20px;
     padding: 10px;
-    width: 182.5px;
+    width: 180px;
     height: 40px;
     border: 1px solid gray;
     border-radius: 25px;
@@ -160,7 +160,7 @@ height: 100px;
     width: 35%;
     height: 40%;
     margin-top: 8vh;
-    background: url('/images/icon-logo.png');
+    background: url('../images/icon-logo.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

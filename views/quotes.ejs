@@ -12,6 +12,22 @@
 /* .profile-pic:hover {
 
 } */
+.selectors {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+#quotes, #lyrics {
+    width: 8vw;
+    font-size: 15px;
+    border-radius: 5px;
+    text-align: center;
+    padding: .5vh;
+}
+#quotes:hover, #lyrics:hover {
+    cursor: pointer;
+}
+
 </style>
 <body>
   <div class="flex-container">
@@ -33,6 +49,14 @@
       <div class="welcome">
         Welcome!
       </div>
+      <div class="selectors">
+          <div class="selected" id="quotes">
+            Quotes
+          </div>
+          <div id="lyrics">
+            Lyrics
+          </div>
+      </div>
       <div class="datepicker">
           Start Date
           <input type="date" id="datepicker">
@@ -43,7 +67,34 @@
     <hr class="navbar-hr">
     <div class="body-container">
       <div class="navbar"><% include navbar %></div>
-      <div class="main-container">
+      <div class="main-container-quotes">
+        <div class="row-quotes-first">
+            Insert here
+        </div>
+        <div class="row-quotes">
+            "Speak softly and carry a big stick."
+            - Theodore Roosevelt
+        </div>
+        <div class="row-quotes">
+
+        </div>
+        <div class="row-quotes">
+
+        </div>
+        <div class="row-quotes">
+
+        </div>
+        <div class="row-quotes">
+
+        </div>
+        <div class="row-quotes">
+
+        </div>
+        <div class="row-quotes">
+
+        </div>
+      </div>
+      <div class="main-container-lyrics hidden">
 
       </div>
     </div>
@@ -51,17 +102,22 @@
 <script>
 $(document).ready(function () {
 
-  $('#nav-home').addClass('selected');
-
-  // const datepicker = require('js-datepicker');
-  // const picker = datepicker('#datepicker');
+    $('#nav-quotes').addClass('selected');
 
   const controlClick = (e) => {
     const el = e.target;
+
+    if (el.id === 'quotes') {
+        $('#quotes, #lyrics').removeClass('selected');
+        $('#quotes').addClass('selected');
+    } else if (el.id === 'lyrics') {
+        $('#quotes, #lyrics').removeClass('selected');
+        $('#lyrics').addClass('selected');
+    }
   }
 
   window.addEventListener('click', controlClick);
-})
+});
 </script>
 </body>
 </html>

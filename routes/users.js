@@ -40,6 +40,8 @@ router.post('/loginProcess', [
     req.session.loggedin = true;
     req.session.user_id = loginInfo.id;
     req.session.user_email = loginInfo.email;
+    req.session.user_first_name = loginInfo.first_name;
+    req.session.user_last_name = loginInfo.last_name;
     res.redirect('/users/home');
   } else {
     res.redirect('/');
@@ -58,6 +60,8 @@ router.post('/register', [
     req.session.loggedin = true;
     req.session.user_id = newRegisterInfo.id;
     req.session.user_email = newRegisterInfo.email;
+    req.session.user_first_name = newRegisterInfo.first_name;
+    req.session.user_last_name = newRegisterInfo.last_name;
     res.redirect('/users/home');
   } else {
     res.redirect('/');
@@ -68,8 +72,19 @@ router.post('/register', [
 router.get('/home', (req, res) => {
   res.render('homepage', {
     user_id: req.session.user_id,
-    user_email: req.session.user_email
+    user_email: req.session.user_email,
+    user_first_name: req.session.user_first_name,
+    user_last_name: req.session.user_last_name
   });
-})
+});
+
+router.get('/quotes', (req, res) => {
+  res.render('quotes', {
+    user_id: req.session.user_id,
+    user_email: req.session.user_email,
+    user_first_name: req.session.user_first_name,
+    user_last_name: req.session.user_last_name
+  });
+});
 
 module.exports = router;

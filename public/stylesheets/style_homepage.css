@@ -7,7 +7,7 @@ body {
 }
 .flex-container {
   width: 100%;
-  height: 98vh;
+  height: 97vh;
 }
 header {
   display: flex;
@@ -31,7 +31,7 @@ header {
   width: 100px;
   height: 100px;
 } */
-.center {
+.center-header {
   display: flex;
   flex-direction: column nowrap;
   justify-content: center;
@@ -42,6 +42,11 @@ header {
   height: 6vh;
   border-radius: 25px;
   text-align: center;
+}
+.google-search:focus { 
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
 }
 .right-header{
   display: flex;
@@ -60,55 +65,20 @@ header {
   border: 2px solid rgb(233, 230, 230);
   margin-bottom: 0;
 }
-
-.body-container {
+.filter-bar {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-  width: 100%;
-  height: 85%;
-}
-.navbar {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  width: 15%;
-  height: 100%;
-  background: whitesmoke;
-  overflow-y: scroll;
-}
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-li {
-  flex-grow: 1;
-  display: flex;
-  flex-flow: row nowrap;
+  justify-content: space-between;
   align-items: center;
-  list-style: none;
-  font-size: 14px;
-  text-align: left;
-}
-li:hover {
-  cursor: pointer;
-  background: #9b9b9b;
-}
-.nav-labels {
-  margin: 0 2vw 0 2vw;
-}
-.navbar-hr {
-  border: 1px solid rgb(233, 230, 230);
-  margin: 0;
+  height: 5%;
+  padding: 0 10px 0 10px;
+  background: whitesmoke;
 }
 .datepicker {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
+  justify-content: space-around;
   align-items: center;
-  padding: .5vw;
 }
 #datepicker {
   height: 30px;
@@ -116,13 +86,61 @@ li:hover {
   border-radius: 5px;
   margin: .5vw;
 }
-.main-container {
+
+.body-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  height: 80vh;
+}
+.navbar {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  align-items: flex-start;
+  width: 15%;
+  height: 80vh;
+  background: whitesmoke;
+  /* overflow-y: scroll; */
+}
+.nav-labels {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  font-size: 14px;
+  text-align: left;
+  color: rgb(59, 59, 59);
+  text-decoration: none;
+}
+.nav-labels:hover {
+  cursor: pointer;
+  background: #9b9b9b;
+}
+#nav-images {
+  margin: 1vh 2vw 1vh 2vw;
+}
+.navbar-hr {
+  border: 1px solid rgb(233, 230, 230);
+  margin: 0;
+}
+.main-container-quotes, .main-lyrics-lyrics {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
   width: 85%;
-  height: 100%;
+  overflow-y: scroll;
+}
+.row-quotes {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 500vh;
+  margin: 5px;
+  border-radius: 15px;
+  background: whitesmoke;
 }
 
 input {
@@ -131,4 +149,11 @@ input {
 }
 img {
   margin: 5px;
+}
+
+.selected {
+  background: #9b9b9b;
+}
+.hidden {
+  display: none;
 }
